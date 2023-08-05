@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible"content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Shreejan_Mdr_Ecommerce_Website</title>
+  <link rel="stylesheet" th:href="@{/css/Indexstyle.css}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+
+</head>
+<body>
+<section id="header">
+  <a href="#"><img src="/images/1.png" class="logo" alt=""></a>
+
+  <div>
+    <ul id="navbar">
+      <li><a href="#hero">Home</a></li>
+      <li><a th:href="@{/dashboard/aboutus}">About Us</a></li>
+      <li><a th:href="@{/user/contact}">Contact Us</a></li>
+      <li><a th:href="@{/cart}">My Cart</a></li>
+      <li><a th:href="@{/user/profile}">Profile</a></li>
+      <form method="post" th:action="@{/logout}">
+        <li><button type="submit" class="logout-button">Logout</button></li>
+      </form>
+
+
+    </ul>
+  </div>
+  <div id="mobile">
+    <a href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+    <i id="bar" class="fas fa-outdent"></i>
+  </div>
+</section>
+
+
+<section id="hero">
+  <h4>Variety of Selection </h4>
+  <h1></h1>
+  <h2>Discount Offers</h2>
+  <h1>From 15% - 20%</h1>
+  <p>Save more with discount coupons</p>
+
+  <button>Shop now</button>
+</section>
+
+<section id="feature" class="section-p1">
+
+  <div class="feature-box">
+    <img src="/images/features/f1.png" alt="">
+    <h6>Free Shipping</h6>
+  </div>
+
+  <div class="feature-box">
+    <img src="/images/features/f2.png" alt="">
+    <h6>Online order</h6>
+  </div>
+
+  <div class="feature-box">
+    <img src="/images/features/f3.png" alt="">
+    <h6>Save Money</h6>
+  </div>
+
+  <div class="feature-box">
+    <img src="/images/features/f4.png" alt="">
+    <h6>Promotions</h6>
+  </div>
+
+  <div class="feature-box">
+    <img src="/images/features/f6.png" alt="">
+    <h6>Customer support</h6>
+  </div>
+
+</section>
+
+
+
+<section id="product1" class="section-p1">
+  <h2>Featured Products</h2>
+  <h6>New Summer Modern collection</h6>
+
+  <div class="pro-container">
+    <div class="pro" th:each="products:${product}">
+      <img class="item-pic" th:src="'data:image/png;base64,'+${products.imageBase64}"/>
+      <div class="description">
+        <span th:text="Apparel"></span>
+        <h5 th:text="'Name:'+${products.name}"></h5>
+        <h5 th:text="'Qty:'+${products.quantity}"></h5>
+        <h4 th:text="'Rs '+${products.price}"></h4>
+        <div class="rating">
+          <i class="fa-sharp fa-solid fa-star"></i>
+          <i class="fa-sharp fa-solid fa-star"></i>
+          <i class="fa-sharp fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half"></i>
+        </div>
+      </div>
+      <form class="form-item" th:method="post" th:action="@{/dashboard/save}" th:object="${product}">
+        <input type="text"  hidden="hidden" name="products_id" th:value="${products.id}">
+        <input type="number" hidden="hidden" name="user_id" th:value="${info.id}">
+        <button class="button-cart" type="submit">Add to cart</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="section-p1">
+  <div class="col">
+
+    <section id="Contact">
+<!--      <h>Contact Us</h>-->
+    </section>
+
+    <img class="logo" src="/images/1.png" alt="">
+
+    <p><strong>Address :</strong>Naya Thimi,Bhaktapur,Street 55,NEPAL</p>
+    <p><strong>Phone :</strong>(+977) 9876543210 / (+977)9876541230 </p>
+    <p><strong>Opening Hours :</strong>10:00 - 17:00,Mon - Sat</p>
+
+  </div>
+
+
+
+  <section id="About">
+    <h>About Us</h>
+    <p>Unlock a world of convenience and style </p>
+    <p> Shop at EazyMart today!</p>
+    <p> Your ultimate online shopping destination</p>
+    <p> as it brings the best experience for you to get </p>
+    <p>online products from the comfort of your home</p>
+
+  </section>
+
+  <div class="col">
+    <h4>Quick Link</h4>
+    <a th:href="@{/dashboard/aboutus}">About Us</a>
+    <a th:href="@{/user/contact}">Contact us</a>
+    <a href="#hero">Home</a>
+
+  </div>
+
+
+  <div class="col">
+    <h4>My Account</h4>
+    <a th:href="@{/user/profile}">profile settings</a>
+    <a th:href="@{/cart}">View cart</a>
+    <a th:action="@{/logout}">Logout</a>
+
+    <div class="follow">
+      <div class="icon">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-square-whatsapp"></i>
+        <i class="fa-brands fa-viber"></i>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="copyright">
+    <div class="icon">
+      <p><i class="fa-regular fa-copyright"></i> 2023, Shreejan Manandhar - 220094 -HTML CSS</p>
+    </div>
+  </div>
+
+</footer>
+
+
+<script th:src="@{/js/Indexscript.js}"></script>
+
+</body>
+</html>

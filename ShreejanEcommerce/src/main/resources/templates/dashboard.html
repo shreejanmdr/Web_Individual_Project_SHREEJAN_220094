@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/footer.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/dashboard.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header th:replace="~{/fragments/header.html}"></header>
+<main>
+    <div class="maintopsection">
+        <div class="mainleftcontainer">
+            <div class="fortitletext">
+                <h1 class="h1-one">Get Your Products</h1>
+                <p class="p-one">Find the Best offers for your Products.</p>
+            </div>
+        </div>
+        <div class="mainrightcontainer">
+            <img class="body-img" th:src="@{/images/hero.jpg}" alt="">
+        </div>
+    </div>
+    <h2 class="title">Find all Products Here</h2>
+    <div id = products-section>
+            <div class="item" th:each="products:${product}">
+                <img class="item-pic" th:src="'data:image/png;base64,'+${products.imageBase64}"/>
+                <p class="item-name" th:text="${products.name}"></p>
+                <div class="info">
+                    <p class="item-price" th:text="${products.price}"></p>
+                    <form class="form-item" th:method="post" th:action="@{/dashboard/save}" th:object="${product}">
+                        <input type="text"  hidden="hidden" name="products_id" th:value="${products.id}">
+                        <input type="number" hidden="hidden" name="user_id" th:value="${info.id}">
+                        <button class="button-cart" type="submit">Add to cart</button>
+                    </form>
+                </div>
+            </div>
+
+    </div>
+</main>
+
+<footer th:replace="~{/fragments/footer.html}"></footer>
+</body>
+</html>

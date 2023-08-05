@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/footer.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/contactus.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header th:replace="~{/fragments/header.html}" ></header>
+<main>
+    <div class="main-container" style="background-color: #E3E6F3">
+<!--        <div class="contact-us">-->
+<!--            <div class="main-contact">-->
+<!--                <h2>Contact Us :</h2>-->
+<!--            </div>-->
+<!--        </div>-->
+        <div class="contact-wrap" style="background-color: #E3E6F3">
+            <div class="contact-in">
+                <h1>Send a Message</h1>
+                <form th:method="post" th:action="@{/user/saveQueries}" th:object="${queries}">
+                    <input type="text" name="name" id="name" placeholder="Full Name" class="contact-in-input" required th:field="*{name}">
+                    <input type="email" name="email" id="email" placeholder="Email" class="contact-in-input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required th:field="*{email}">
+                    <input type="text" name="subject" id="subject" placeholder="Subject" class="contact-in-input" required th:field="*{subject}">
+                    <textarea type="text" name="message" id="message" placeholder="Message" class="contact-in-textarea" required th:field="*{message}"></textarea>
+                    <input type="submit" value="SUBMIT" class="contact-in-btn">
+                </form>
+                <script th:src="@{~/javascript/contact_page.js}"></script>
+            </div>
+            <div class="contact-in" style="background-color: #E3E6F3">
+                 <h1>Contact us</h1>
+                <h2><i class="fa fa-phone"></i> 9808759787</h2>
+                <h2><i class="fa fa-envelope"></i>EazyMart@gmail.com </h2>
+                <h2><i class="fa-solid fa-location-dot"></i> Kathmandu, Nepal</h2>
+            </div>
+        </div>
+    </div>
+    </div>
+</main>
+<footer th:replace="~{/fragments/footer.html}"></footer>
+</body>
+</html>

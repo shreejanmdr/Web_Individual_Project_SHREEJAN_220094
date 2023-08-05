@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="rajiv.css">
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+<div id="main">
+    <div id="page1">
+
+        <div id="mySidenav" class="sidenav">
+            <p class="logo"><span>A</span>-dmin Pannel</p>
+            <a href="/user/table"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Customers</a>
+            <a href="/product/table"class="icon-a active" style="background:black"><i class="fa fa-list icons"></i> &nbsp;&nbsp;View Product</a>
+            <a href="/product/create"class="icon-a active" style="background:red"><i class="fa fa-list icons"></i> &nbsp;&nbsp;Add Products</a>
+            <a href="#"class="icon-a"><i class="fa fa-shopping-bag icons"></i> &nbsp;&nbsp;Orders</a>
+
+        </div>
+
+
+        <div class="head">
+            <div class="col-div-6">
+                <span style="font-size:30px;cursor:pointer; color: white;" class="nav"  >&#9776; Department</span>
+                <span style="font-size:30px;cursor:pointer; color: white;" class="nav2"  >&#9776; Department</span>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="container">
+                <div class="row">
+                    <!--        <div class="col-4">-->
+                    <!--            <ul class="nav flex-column">-->
+                    <!--                <li class="nav-item">-->
+                    <!--                    <a class="nav-link active" href="/product">Product</a>-->
+                    <!--                </li>-->
+                    <!--                <li class="nav-item">-->
+                    <!--                    <a class="nav-link" href="/item">Item</a>-->
+                    <!--                </li>-->
+
+                    <!--                <li class="nav-item">-->
+                    <!--                    <a class="nav-link" href="/booking">Booking</a>-->
+                    <!--                </li>-->
+
+                    <!--            </ul>-->
+                    <!--        </div>-->
+                    <div class="col-8">
+                        <h2>Product form</h2>
+                        <form th:method="post" th:action="@{/product/save}"
+                              th:object="${productDto}" enctype="multipart/form-data">
+
+
+                            <input type="hidden" name="id" th:value="${productDto.id}" />
+                            <div class="form-group">
+                                <label for="productName">Product Name:</label>
+                                <input type="text" th:field="*{productName}"
+                                       th:value="${productDto.productName}"
+                                       class="form-control"
+                                       id="productName" placeholder="Enter product name"
+                                       name="productName">
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="productDescription">Product Description:</label>
+                                <input type="text" th:field="*{productDescription}"
+                                       th:value="${productDto.productDescription}"
+                                       class="form-control"
+                                       id="productDescription" placeholder="Enter product description"
+                                       name="productDescription">
+
+                            </div>
+
+                            <!--                <div class="form-group">-->
+                            <!--                    <label for="productPrice">Product Price:</label>-->
+                            <!--                    <input type="text" th:field="*{productPrice}"-->
+                            <!--                           th:value="${productDto.productPrice}"-->
+                            <!--                           class="form-control"-->
+                            <!--                           id="productPrice" placeholder="Enter product Price"-->
+                            <!--                           name="productPrice">-->
+
+                            <!--                </div>-->
+
+
+                            <div class="form-group">
+                                <label for="image">Product Image:</label>
+                                <input type="file" th:field="*{image}"
+                                       th:value="${productDto.image}"
+                                       class="form-control"
+                                       id="image" placeholder="Enter Image"
+                                       name="image">
+
+                            </div>
+
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <br/>
+
+    </div>
+</div>
+</body>
+</html>
+
+
+
+

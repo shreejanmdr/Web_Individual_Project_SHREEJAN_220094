@@ -1,0 +1,91 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+/* Styles for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Styles for the sidebar */
+.sidebar-title {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: royalblue ;
+    color: #fff;
+}
+
+.sidebar-title img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.sidebar-title h4 {
+    margin: 0;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.sidebar-list-item {
+    margin-bottom: 10px;
+}
+
+.sidebar-list-item a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px 10px;
+}
+
+/*.sidebar-list-item a:hover {*/
+/*    background-color: #f2f2f2;*/
+/*    border-radius: 4px;*/
+/*}*/
+
+
+.edit-button,
+.delete-button {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px; /* Rounded corners */
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    background-color: red;
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
