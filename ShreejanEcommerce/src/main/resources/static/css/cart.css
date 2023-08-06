@@ -47,6 +47,7 @@ main {
 .content-table td {
     padding: 12px 15px;
     border-bottom: 1px solid #dddddd;
+    color: aliceblue;
 }
 
 button {
@@ -63,14 +64,14 @@ button {
 }
 .delete_button {
     text-decoration: none;
-    color: black;
+    color: aliceblue;
     cursor: pointer;
 }
 .edit-button:hover {
     color: #65CAD1;
 }
 .delete_button:hover {
-    color: #65CAD1;
+    color: red;
 }
 fieldset {
     display: flex;

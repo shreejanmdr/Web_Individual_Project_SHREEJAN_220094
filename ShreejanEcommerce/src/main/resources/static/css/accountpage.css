@@ -12,7 +12,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color:#E3E6F3!important;
+    /*background-color:#E3E6F3!important;*/
     font-family: 'Poppins', sans-serif;
 }
 html {
@@ -32,13 +32,13 @@ main {
     justify-content: center;
     align-items: center;
     width: 60%;
-    background-color: paleturquoise;
+    background-color: steelblue;
     border: 2px solid grey;
     box-shadow: 5px 5px 5px grey;
 }
 .main-title {
     font-size: 35px;
-    color: grey;
+    color: black;
     text-decoration: underline;
 }
 .profile-section {
@@ -68,7 +68,7 @@ main {
     margin-top: 15px;
 }
 .labels {
-    color: grey;
+    color: #c2ccff;
 }
 .inputs {
     display: flex;

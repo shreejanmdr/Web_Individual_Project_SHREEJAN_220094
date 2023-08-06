@@ -9,8 +9,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    /*background-image:url('static/images/poster/bg2.jpg');*/
-    background-image: image('static/images/poster/bg2.jpg');
+    /*background: radial-gradient(navy, lightblue);*/
+    background-image: url("/images/poster/bg3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -36,7 +36,7 @@ form {
     align-items: center;
     width: 380px;
     height: 60vh;
-    background-color: white;
+    background-color: #b2d9f1f2;;
     border: 2px solid black;
     border-radius: 42px;
 }

@@ -366,7 +366,7 @@ main {
 
 .contact-in h1 {
     font-size: 24px;
-    color: black;
+    color: revert;
     text-transform: uppercase;
     font-weight: 500;
     margin-bottom: 20px;
