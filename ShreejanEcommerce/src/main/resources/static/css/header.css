@@ -1,95 +1,107 @@
-a {
-    color: grey;
-    font-size: 20px;
-}
-header {
+#header {
     display: flex;
-    flex-direction: column;
-    height: 20vh;
-    border-bottom: 1px solid rgb(72, 72, 72);
-}
-.topsection {
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 80px;
     background-color: #E3E6F3;
-    display: flex;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
-.headerleftsection {
-    display: flex;
-    width: 380px;
-    justify-content: center;
-}
-.logo {
-    width: 250px;
-    height: 15vh;
-    cursor: pointer;
-}
-.logo-img {
-    width: 100%;
-    height: 100%;
-}
-.headermiddlesection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* width: 700px; */
-    max-width: 700px;
-}
-.search-box {
-    width: 480px;
-    height: 50px;
-    padding-left: 10px;
-    border: 1px solid;
-    font-size: 15px;
-    border-radius: 15px;
-    background-color: transparent;
-    color: grey;
-}
-.search-btn {
-    width: 140px;
-    height: 50px;
-    background-color: #65CAD1;
-    border-radius: 15px;
-    color: white;
-    outline: 0;
-    border: 0;
-    font-size: 15px;
-    cursor: pointer;
-}
-.search-btn:hover {
-    background-color: transparent;
-    color: #65CAD1;
-    border-color: #65CAD1;
-    border: 1px solid;
-}
-.headerrightsection {
-    display: flex;
-    width: 150px;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.navigation {
-    display: flex;
-    max-width: 600px;
-    height: 5vh;
-    justify-content: space-evenly;
-}
-.header-ul {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: #E3E6F3;
-    align-items: center;
-    text-decoration: none;
 
-    width: 400px;
-    height: 5vh;
-}
-.header-li {
-    color: grey;
-    font-size: 20px;
-    list-style-type: none;
-    background-color: #E3E6F3;
-}
+/*a {*/
+/*    color: grey;*/
+/*    font-size: 20px;*/
+/*}*/
+/*header {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    height: 20vh;*/
+/*    border-bottom: 1px solid rgb(72, 72, 72);*/
+/*}*/
+/*.topsection {*/
+/*    background-color: #E3E6F3;*/
+/*    display: flex;*/
+/*}*/
+/*.headerleftsection {*/
+/*    display: flex;*/
+/*    width: 380px;*/
+/*    justify-content: center;*/
+/*}*/
+/*.logo {*/
+/*    width: 250px;*/
+/*    height: 15vh;*/
+/*    cursor: pointer;*/
+/*}*/
+/*.logo-img {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
+/*.headermiddlesection {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    !* width: 700px; *!*/
+/*    max-width: 700px;*/
+/*}*/
+/*.search-box {*/
+/*    width: 480px;*/
+/*    height: 50px;*/
+/*    padding-left: 10px;*/
+/*    border: 1px solid;*/
+/*    font-size: 15px;*/
+/*    border-radius: 15px;*/
+/*    background-color: transparent;*/
+/*    color: grey;*/
+/*}*/
+/*.search-btn {*/
+/*    width: 140px;*/
+/*    height: 50px;*/
+/*    background-color: #65CAD1;*/
+/*    border-radius: 15px;*/
+/*    color: white;*/
+/*    outline: 0;*/
+/*    border: 0;*/
+/*    font-size: 15px;*/
+/*    cursor: pointer;*/
+/*}*/
+/*.search-btn:hover {*/
+/*    background-color: transparent;*/
+/*    color: #65CAD1;*/
+/*    border-color: #65CAD1;*/
+/*    border: 1px solid;*/
+/*}*/
+/*.headerrightsection {*/
+/*    display: flex;*/
+/*    width: 150px;*/
+/*    justify-content: space-evenly;*/
+/*    align-items: center;*/
+/*}*/
+/*.navigation {*/
+/*    display: flex;*/
+/*    max-width: 600px;*/
+/*    height: 5vh;*/
+/*    justify-content: space-evenly;*/
+/*}*/
+/*.header-ul {*/
+/*    display: flex;*/
+/*    justify-content: space-evenly;*/
+/*    !*background-color: #E3E6F3;*!*/
+/*    align-items: center;*/
+/*    text-decoration: none;*/
+/*    width: 600px;*/
+/*    height: 5vh;*/
+/*}*/
+/*.header-li {*/
+/*    color: b;*/
+/*    font-size: 20px;*/
+/*    list-style-type: none;*/
+/*    !*background-color: #E3E6F3;*!*/
+/*}*/
 .header-a {
-    color: grey;
+    color: navy;
     text-decoration: none;
 
 }

@@ -1,43 +1,112 @@
+<!--<footer>-->
+<!--    <div class="footerleftsection">-->
+<!--        <div class="footerlogo">-->
+<!--&lt;!&ndash;            <img class="footer-img" th:src="@{/images/1.png}" width="40" height="40" >&ndash;&gt;-->
+<!--        </div>-->
+<!--        <div class="footer-description">-->
+<!--            <p class="footer-describe">Unlock a world of convenience and style – Shop at EazyMart today!-->
+<!--                Your ultimate online shopping destination as it brings the best experience for you to get online products from the comfort of your home.</p>-->
+<!--            </p>-->
+<!--        </div>-->
+<!--&lt;!&ndash;        <div class="coonections">&ndash;&gt;-->
+<!--&lt;!&ndash;            <nav>&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul class="footer-ul">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="footer-li"><a class="footer-a" href=""><i class="fa-brands fa-facebook"></i></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="footer-li"><a class="footer-a" href=""><i class="fa-brands fa-twitter"></i></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="footer-li"><a class="footer-a" href=""><i class="fa-brands fa-instagram"></i></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="footer-li"><a class="footer-a" href=""><i class="fa-brands fa-youtube"></i></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="footer-li"><a class="footer-a" href=""><i class="fa-brands fa-pinterest"></i></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;            </nav>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--    </div>-->
+<!--    <div class="footermiddlesection">-->
+<!--        <nav>-->
+<!--            <ul class="footermiddleul">-->
+<!--                <li class="footerliheader">QuickLinks</li>-->
+<!--                <li class="footermiddleli"><a class="footermiddlea" th:href="@{/user/profile}">My Profile</a></li>-->
+<!--                <li class="footermiddleli"><a class="footermiddlea" th:href="@{/cart}">My cart</a></li>-->
+<!--                <li class="footermiddleli"><a class="footermiddlea" th:href="@{/user/contact}">Contact Us</a></li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+<!--    </div>-->
+<!--    <div class="footerrightsection">-->
+<!--        <nav>-->
+<!--            <ul class="footermiddleul">-->
+<!--                <li class="footerliheader">Shopping</li>-->
+<!--                <li class="footermiddleli"><a class="footermiddlea" th:href="@{/dashboard}">Home</a></li>-->
+<!--                <li class="footermiddleli"><a class="footermiddlea" th:href="@{/dashboard#products-section}">Products</a></li>-->
+<!--                <li class="footermiddleli"><a class="footermiddlea" th:href="@{/aboutus}">About Us</a></li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+<!--    </div>-->
+<!--</footer>-->
+
+
+<link rel="stylesheet" th:href="@{/css/Indexstyle.css}">
+
 <footer>
-    <div class="footerleftsection">
-        <div class="footerlogo">
-<!--            <img class="footer-img" th:src="@{/images/1.png}" width="40" height="40" >-->
+    <footer class="section-p1">
+        <div class="col">
+
+            <section id="Contact">
+                <!--      <h>Contact Us</h>-->
+            </section>
+
+            <img class="logo" src="/images/1.png" alt="">
+
+            <p><strong>Address :</strong>Naya Thimi,Bhaktapur,Street 55,NEPAL</p>
+            <p><strong>Phone :</strong>(+977) 9876543210 / (+977)9876541230 </p>
+            <p><strong>Opening Hours :</strong>10:00 - 17:00,Mon - Sat</p>
+
         </div>
-        <div class="footer-description">
-            <p class="footer-describe">Unlock a world of convenience and style – Shop at EazyMart today!
-                Your ultimate online shopping destination as it brings the best experience for you to get online products from the comfort of your home.</p>
-            </p>
+
+
+
+        <section id="About">
+            <h>About Us</h>
+            <p>Unlock a world of convenience and style </p>
+            <p> Shop at EazyMart today!</p>
+            <p> Your ultimate online shopping destination</p>
+            <p> as it brings the best experience for you to get </p>
+            <p>online products from the comfort of your home</p>
+
+        </section>
+
+        <div class="col">
+            <h4>Quick Link</h4>
+            <a th:href="@{/dashboard/aboutus}">About Us</a>
+            <a th:href="@{/user/contact}">Contact us</a>
+            <a th:href="@{/dashboard}">Home</a>
+
         </div>
-        <div class="coonections">
-            <nav>
-                <ul class="footer-ul">
-                    <li class="footer-li"><a class="footer-a" href=""><i class="fa-brands fa-facebook"></i></a></li>
-                    <li class="footer-li"><a class="footer-a" href=""><i class="fa-brands fa-twitter"></i></a></li>
-                    <li class="footer-li"><a class="footer-a" href=""><i class="fa-brands fa-instagram"></i></a></li>
-                    <li class="footer-li"><a class="footer-a" href=""><i class="fa-brands fa-youtube"></i></a></li>
-                    <li class="footer-li"><a class="footer-a" href=""><i class="fa-brands fa-pinterest"></i></a></li>
-                </ul>
-            </nav>
+
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a th:href="@{/user/profile}">profile settings</a>
+            <a th:href="@{/cart}">View cart</a>
+            <a th:action="@{/logout}">Logout</a>
+
+            <div class="follow">
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-square-whatsapp"></i>
+                    <i class="fa-brands fa-viber"></i>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="footermiddlesection">
-        <nav>
-            <ul class="footermiddleul">
-                <li class="footerliheader">QuickLinks</li>
-                <li class="footermiddleli"><a class="footermiddlea" th:href="@{/user/profile}">My Profile</a></li>
-                <li class="footermiddleli"><a class="footermiddlea" th:href="@{/cart}">My cart</a></li>
-                <li class="footermiddleli"><a class="footermiddlea" th:href="@{/user/contact}">Contact Us</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="footerrightsection">
-        <nav>
-            <ul class="footermiddleul">
-                <li class="footerliheader">Shopping</li>
-                <li class="footermiddleli"><a class="footermiddlea" th:href="@{/dashboard}">Home</a></li>
-                <li class="footermiddleli"><a class="footermiddlea" th:href="@{/dashboard#products-section}">Products</a></li>
-                <li class="footermiddleli"><a class="footermiddlea" th:href="@{/aboutus}">About Us</a></li>
-            </ul>
-        </nav>
-    </div>
+
+
+        <div class="copyright">
+            <div class="icon">
+                <p><i class="fa-regular fa-copyright"></i> 2023, Shreejan Manandhar - 220094 -HTML CSS</p>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script th:src="@{/js/Indexscript.js}"></script>
 </footer>

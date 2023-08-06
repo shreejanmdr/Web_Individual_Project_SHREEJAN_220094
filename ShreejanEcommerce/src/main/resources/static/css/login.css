@@ -9,8 +9,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: blue;
-    background-image:url('static/images/poster/1.avif');
+    /*background-image:url('static/images/poster/bg2.jpg');*/
+    background-image: image('static/images/poster/bg2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -38,7 +38,7 @@ form {
     height: 60vh;
     background-color: white;
     border: 2px solid black;
-    border-radius: 12px;
+    border-radius: 42px;
 }
 
 .title {
@@ -91,7 +91,7 @@ a {
 
 
 
-/*!* Add your CSS styles here *!*/
+
 /*body {*/
 /*    font-family: 'Poppins', sans-serif;*/
 /*    margin: 0;*/

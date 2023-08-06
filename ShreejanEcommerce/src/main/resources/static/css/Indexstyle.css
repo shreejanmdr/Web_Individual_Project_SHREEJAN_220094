@@ -958,7 +958,7 @@ p {
 /*footer padding*/
 .section-p1 {
   padding: 20px 80px;
-  background-color: #E3E6F3;
+  /*background-color: #E3E6F3;*/
 
 }
 
@@ -1005,6 +1005,7 @@ body {
   padding: 2px 80px;
   background-color: #E3E6F3;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  box-shadow: 3px 3px 3px grey;
   z-index: 999;
 
   /*sticky or fixed nav bar */

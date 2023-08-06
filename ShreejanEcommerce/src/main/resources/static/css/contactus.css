@@ -292,7 +292,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 body {
     flex-wrap: wrap;
@@ -304,9 +303,12 @@ html {
 }
 /* main */
 main {
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #E3E6F3;
+    box-shadow: 5px 5px 5px grey;
 }
 .contact-us{
     border-radius: 10px;
@@ -345,13 +347,13 @@ main {
 
 .contact-in:nth-child(1) {
     flex: 30%;
-    background: rgb(95 99 104);
+    background: rgb(74 96 253);
 }
 
 .contact-in:nth-child(2) {
     /*flex: 15%;*/
     /* background: url(../images/1.jpg); */
-    background-color: #292D33;
+    background-color:midnightblue;
     color: white;
     font-weight: bold;
 }

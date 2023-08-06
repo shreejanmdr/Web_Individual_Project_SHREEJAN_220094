@@ -1,39 +1,67 @@
-
+<link rel="stylesheet" th:href="@{/css/Indexstyle.css}">
 <header>
-    <div class="topsection" style="background-color: white">
-        <div class="headerleftsection">
-            <a th:href="@{/dashboard}" class="logo">
-                <img class="logo-img" th:src="@{/images/1.png}" width="20" height="20" >
-            </a>
-        </div>
-        <form class="headermiddlesection">
-            <input type="search" name="search" placeholder="Search here" class="search-box">
-            <button class="search-btn">Search</button>
-        </form>
-        <div class="headerrightsection">
-            <a th:href="@{/cart}" class="cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-            <a th:href="@{/user/profile}" class="profile">
-                <i class="fa-solid fa-user"></i>
-            </a>
-        </div>
-    </div>
-    <div class="navigation">
-        <nav>
-            <ul class="header-ul">
-                <li class="header-li">
-                    <a class="header-a" th:href="@{/dashboard}">Home</a>
-                </li>
-                <li class="header-li">
-                    <a class="header-a" th:href="@{/dashboard#products-section}">Products</a>
-                </li>
-                <li class="header-li">
-                    <a class="header-a" th:href="@{/dashboard/aboutus}">About us</a>
-                </li>
+    <section id="header">
+        <a href="#"><img src="/images/1.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a th:href="@{/dashboard}">Home</a></li>
+                <li><a th:href="@{/dashboard/aboutus}">About Us</a></li>
+                <li><a th:href="@{/user/contact}">Contact Us</a></li>
+                <li><a th:href="@{/cart}">My Cart</a></li>
+                <li><a th:href="@{/user/profile}">Profile</a></li>
+                <form method="post" th:action="@{/logout}">
+                    <li><button type="submit" class="logout-button">Logout</button></li>
+                </form>
+
+
             </ul>
-        </nav>
-    </div>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+
+
+<!--    <div class="topsection" style="background-color: white">-->
+<!--        <div class="headerleftsection">-->
+<!--            <a th:href="@{/dashboard}" class="logo">-->
+<!--                <img class="logo-img" th:src="@{/images/1.png}" width="20" height="20" >-->
+<!--            </a>-->
+<!--        </div>-->
+<!--        <form class="headermiddlesection">-->
+<!--            <input type="search" name="search" placeholder="Search here" class="search-box">-->
+<!--            <button class="search-btn">Search</button>-->
+<!--        </form>-->
+<!--        <div class="headerrightsection">-->
+<!--            <a th:href="@{/cart}" class="cart">-->
+<!--                <i class="fa-solid fa-cart-shopping"></i>-->
+<!--            </a>-->
+<!--            <a th:href="@{/user/profile}" class="profile">-->
+<!--                <i class="fa-solid fa-user"></i>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="navigation">-->
+<!--        <nav>-->
+<!--            <ul class="header-ul">-->
+<!--                <li class="header-li">-->
+<!--                    <a class="header-a" th:href="@{/dashboard}">Home</a>-->
+<!--                </li>-->
+<!--                <li class="header-li">-->
+<!--                    <a class="header-a" th:href="@{/dashboard#products-section}">Products</a>-->
+<!--                </li>-->
+<!--                <li class="header-li">-->
+<!--                    <a class="header-a" th:href="@{/dashboard/aboutus}">About us</a>-->
+<!--                </li>-->
+<!--                <li class="header-li">-->
+<!--                    <a class="header-a" th:href="@{/user/contact}">Contact us</a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+<!--    </div>-->
 </header>
 
 
