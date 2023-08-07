@@ -12,7 +12,7 @@
 body {
     display: flex;
     flex-direction: column;
-    /*background-color:#E3E6F3!important;*/
+    background-color:#E3E6F3!important;
     font-family: 'Poppins', sans-serif;
 }
 html {
