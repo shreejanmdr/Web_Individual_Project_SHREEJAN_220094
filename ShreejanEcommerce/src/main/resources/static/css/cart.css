@@ -17,7 +17,7 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 150px;
+    padding: 100px;
     background-color: #E3E6F3;
     box-shadow: 5px 5px 5px grey;
 }
@@ -56,6 +56,11 @@ button {
     height: 40px;
     border-radius: 12px;
     background-color: rgb(237, 79, 51);
+}
+.t1{
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px;
 }
 .edit-button {
     text-decoration: none;

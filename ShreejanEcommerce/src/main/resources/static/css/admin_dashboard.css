@@ -375,8 +375,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #00001F;
-    color: #4f44e1;;
+    background-color:  darkslategrey;
+    color: cornflowerblue;;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -415,7 +415,7 @@ body {
     flex-direction: column;
     grid-area: sidebar;
     height: 100%;
-    background-color: #00001F;
+    background-color:  darkslategrey;
     border-right: 1px solid grey;
     overflow-y: auto;
     transition: all 0.5s;
@@ -464,7 +464,7 @@ body {
 
 .sidebar-list-item > a {
     text-decoration: none;
-    color: #9e9ea4;
+    color: white;
 }
 
 .sidebar-responsive {

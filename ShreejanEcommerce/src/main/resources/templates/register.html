@@ -13,7 +13,7 @@
 <main>
     <form class="signup" th:method="post" th:action="@{/user/save}" th:object="${user}">
         <div class="title">
-            <h2>Register here</h2>
+            <h2>Sign Up</h2>
         </div>
         <div class="fields">
             <input type="text" name="name" id="name" placeholder="Enter your Full Name..." required th:field="*{name}">
@@ -23,7 +23,7 @@
             <input type="password" name="password" id="change-password" placeholder="Enter your password..." required th:field="*{password}">
             <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm your password...">
             <button type="submit" id="register-btn" onclick="validateRegister()">Register</button>
-            <h5>Already have an account? <a th:href="@{/login}">click here</a></h5>
+            <h5>Already have an account? <a th:href="@{/login}">Sign In</a></h5>
         </div>
     </form>
 </main>
