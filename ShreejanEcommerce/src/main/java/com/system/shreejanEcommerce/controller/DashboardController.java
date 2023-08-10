@@ -31,7 +31,7 @@ public class DashboardController {
     private final ProductCartService productCartService;
     private final UserService userService;
     public String getImageBase64(String fileName) {
-        String filePath = System.getProperty("user.dir") + "/tintinproducts/";
+        String filePath = System.getProperty("user.dir") + "/EazyMart/";
         File file = new File(filePath + fileName);
         byte[] bytes = new byte[0];
         try {
